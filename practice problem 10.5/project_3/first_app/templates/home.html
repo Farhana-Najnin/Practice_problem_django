@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>This is Home page</h1>
+    <h2>Author:{{author}}</h2>
+    <h2>Age:{{age}}</h2> -->
+    <h2>Using Join Function : {{ lst | join:" - " }}</h2>
+    <h2>Using Date Filter : {{ birthday | date:"D d M Y" }}</h2>
+    <h2>Using Add filter : {{ value | add:"5" }}</h2>
+    <h2>Using Capfirst Filter : {{ 'christmas' | capfirst }}</h2>
+    <h2>Using Cut filter : {{ "Python is Fun" | cut:" " }}</h2>
+
+    <h2>Using Dictsort Filter:</h2>
+
+  {% for i in value1|dictsort:"name" %}
+    <h3>{{ i.name }} - {{ i.age }}</h3>
+  {% endfor %}
+   <h2>Using First Filter : {{ lst | first }}</h2>
+   <h2>Using Last Filter : {{ lst | last }}</h2>
+   <h2>Using Length Filter check empty string : </h2>
+{% if val|length < 1 %}
+   <h4>Empty String</h4>
+{% else %}
+   <h4>Not Empty String</h4>
+{% endif %}
+
+   <h2>Using Linenumbers Filter : {{ lst | linenumbers }} </h2>
+
+<h2>Using Lower Filter : {{ st | lower }}</h2>
+<h2>Using Upper Filter : {{ st | upper }}</h2>
+<h2>Using Title Filter : {{ st | title }}</h2>
+<h2>Using Random Filter : {{ value2 | random }}</h2>
+<h2>Using Slice Filter : {{ value2 | slice:":2" }}</h2>
+<h2>Using Time Filter : {{ birthday | time:"H:i" }}</h2>
+<h2>Using Timesince Filter : {{ birthday | timesince }} </h2>
+<h2>Using truncatechars Filter : {{ value2 | truncatechars:9 }}</h2>
+<h2>Using wordcount Filter : {{ value2 | wordcount }}</h2>
+<h2>Using Truncatewords Filter : {{ st | truncatewords:3 }}</h2>
+<h2>Using Make_list Filter : {{ na | make_list }}</h2>
+
+
+</body>
+</html>
